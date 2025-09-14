@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cricket Stats</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+    <div class="container">
+        <h2>Cricket Statistics</h2>
+
+        <div class="input-section">
+            <h3>Enter Match Details</h3>
+            <label for="numBatsmen">Number of Batsmen:</label>
+            <input type="number" id="numBatsmen" value="0">
+            <div id="batsmanInputs"></div>
+
+            <label for="numBowlers">Number of Bowlers:</label>
+            <input type="number" id="numBowlers" value="0">
+            <div id="bowlerInputs"></div>
+
+            <div class="button-container">
+                <button onclick="collectData()">Record Data</button>
+            </div>
+        </div>
+
+        <div class="output-section">
+            <h3>View Statistics</h3>
+            <label for="choice">Select Option:</label>
+            <select id="choice">
+                <option value="">Select an option</option>
+                <option value="1">Batsman Detail</option>
+                <option value="2">Bowler Detail</option>
+                <option value="3">Match Summary</option>
+                <option value="4">Records</option>
+            </select>
+            <div id="playerNumberInput" style="display:none;">
+                <label for="playerNumber">Enter Player Number:</label>
+                <input type="number" id="playerNumber" value="1">
+            </div>
+            <div class="button-container">
+                <button onclick="viewStats()">View</button>
+            </div>
+            <div id="output"></div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
